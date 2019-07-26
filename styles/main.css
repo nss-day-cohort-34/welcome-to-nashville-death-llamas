@@ -1,1 +1,41 @@
 /* This is where we make it look great. AFTER we get MVP */
+body {
+    background: url("https://photos.smugmug.com/BelmontStockPhotos/20162017-stock-images/Nashville-skyline/i-PTNw6b5/0/258741aa/L/0516-skyline-402-L.jpg") no-repeat center fixed;
+    background-color: rgb(105,185,254);
+    background-size: cover;
+    min-height: 100vh;
+    color: rgb(1,59,154);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.welcomeHeader {
+    display: flex;
+    justify-content: center;
+    font-size: 3em;
+    font-family: 'Shrikhand', cursive;
+}
+
+#searchContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1em 5em;
+    background-color: white;
+}
+
+button {
+    background-color: rgb(248,228,144);
+    border: none;
+    color: rgb(1,59,154);
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button:hover {
+    background-color: rgb(241,187,122);
+}
+
+fieldset {
+    border:none;
+    border-radius: 5px;
+}

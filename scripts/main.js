@@ -19,5 +19,5 @@ const fetchTheFetcher = () => {
 
 
 parkSearchButton.addEventListener("click", () => {
-    fetchTheFetcher()
+        fetchTheFetcher()
 })

@@ -6,7 +6,7 @@ const parkSearchButton = document.querySelector("#parkSearchButton")
 
 const fetchTheFetcher = () => {
     parkFetcher().then(parks => {
-        console.log('parks: ', parks);
+        // console.log('parks: ', parks);
 
         for (let i = 0; i < parks.length; i++) {
             const park = parks[i];
@@ -19,5 +19,6 @@ const fetchTheFetcher = () => {
 
 
 parkSearchButton.addEventListener("click", () => {
+        parksInDom.innerHTML = ""
         fetchTheFetcher()
 })

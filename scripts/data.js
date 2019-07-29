@@ -11,8 +11,3 @@ const restarauntFetcher = () => {
     }
 
 restarauntFetcher()
-
-    .then(r => r.json())
-    .then(results => {
-        console.log(results)
-    })

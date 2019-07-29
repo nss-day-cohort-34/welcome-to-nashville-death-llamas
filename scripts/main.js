@@ -14,6 +14,10 @@ const fetchTheFetcher = () => {
             renderPark(htmlRep)
             
         }
+    const saveParkButton = document.querySelector("#saveParkButton")
+    saveParkButton.addEventListener("click", () => {
+        console.log("hello")
+    })
     })
 }
 
@@ -21,7 +25,12 @@ const fetchTheFetcher = () => {
 parkSearchButton.addEventListener("click", () => {
         parksInDom.innerHTML = ""
         fetchTheFetcher()
-})
+
+    })
+    
+
+
+
 const getConcertFetch = () => {
     getConcertData().then(concerts => {
     
@@ -34,9 +43,31 @@ const getConcertFetch = () => {
         }
     })
     }
-    
-    const getConcertsButton = document.getElementById("concertsSearchButton")
-    
-    getConcertsButton.addEventListener("click", () => {
-        getConcertFetch();
-    })
+
+const getConcertsButton = document.getElementById("concertsSearchButton")
+
+getConcertsButton.addEventListener("click", () => {
+    getConcertFetch();
+})
+
+
+
+// let i = 0
+// const incrementID = () => {
+//     i++
+//     return i
+// }
+
+
+// const incrementedID = incrementID()
+
+// const cardFactory = () => {
+// `
+//     <section class="card--${incrementedID}">
+//         <p>${textarea.value}</p>
+//         <button class="deleteButton delete--${incrementedID}">Delete</button>
+//     </section>
+// `
+// }
+
+

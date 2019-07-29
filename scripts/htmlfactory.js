@@ -26,6 +26,8 @@ const createConcertHTML = (concertObj) => {
     `
 }
 
+
+
 const parksHTML = parkObject => {
     const parkAddress = parkObject.mapped_location.human_address
         .replace('{"address": "', "").replace('", "city": "', ", ").replace('", "state": "', ", ").replace('", "zip": ""}', "").replace('", "zip": "37206"}', "")
@@ -40,3 +42,4 @@ const parksHTML = parkObject => {
     </section>
     `
 }
+

@@ -34,7 +34,6 @@ const fetchTheFetcher = () => {
 parkSearchButton.addEventListener("click", () => {
         parksInDom.innerHTML = ""
         fetchTheFetcher()
-
     })
     
 

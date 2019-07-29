@@ -18,6 +18,8 @@ body {
     background-color: white;
 }
 
+
+
 /* affects the individual search fields */
 fieldset {
     display: flex;
@@ -44,6 +46,61 @@ button:hover {
     flex-direction: row;
     flex-wrap: wrap;
     font-size: 14px;
+}
+
+#parkResults {
+    background-color: white;
+    opacity: 0.9;
+    height: 500px;
+    overflow: scroll;
+}
+
+#concertResults {
+    background-color: white;
+    opacity: 0.9;
+    height: 500px;
+    overflow: scroll;
+}
+
+#restaurantResults {
+    background-color: white;
+    opacity: 0.9;
+    height: 500px;
+    overflow: scroll;
+}
+
+#meetupResults {
+    background-color: white;
+    opacity: 0.9;
+    height: 500px;
+    overflow: scroll;
+}
+
+#itineraryContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: white;
+    opacity: 0.9s;
+}
+
+#itineraryContainer__park {
+    margin: 5px;
+}
+
+#itineraryContainer__concert {
+    margin: 5px;
+
+}
+
+#itineraryContainer__restaurant {
+    margin: 5px;
+
+}
+
+#itineraryContainer__meetup {
+    margin: 5px;
+
 }
 
 section {

@@ -22,7 +22,7 @@ const getMeetups = () => {
             // console.log(results)
             for (result of results.events) {
                 const htmlRep = meetupsFactory(result)
-                printToDOM(htmlRep)
+                DOMprinter(htmlRep)
             }
 
         })

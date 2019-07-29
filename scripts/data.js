@@ -13,10 +13,10 @@ const restarauntFetcher = () => {
 restarauntFetcher()
 
 //matt's code below (does beg refactoring at "modularization phase")
-const searchMeetups = document.querySelector("#meetupsSearchField").value
+const searchMeetups = document.querySelector("#meetupsSearchField")
 
 const getMeetups = () => {
-    return fetch(`https://www.eventbriteapi.com/v3/events/search/?q=${searchMeetups}&location.address=nashville&token=NAZKLO5PCLPRIX3ALUP5`)
+    return fetch(`https://www.eventbriteapi.com/v3/events/search/?q=${searchMeetups.value}&location.address=nashville&token=NAZKLO5PCLPRIX3ALUP5`)
         .then(a => a.json())
         .then(results => {
             // console.log(results)
@@ -31,10 +31,10 @@ const getMeetups = () => {
 const meetupsButton = document.querySelector("#meetupsSearch")
 meetupsButton.addEventListener("click", getMeetups)
 
-const concertInputValue = document.querySelector("#concertInput").value
+const concertInputValue = document.querySelector("#concertInput")
 
 getConcertData = () => {
-    return fetch(`https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=343&sort=date,asc&keyword=${concertInputValue}&apikey=QPEjElLoY6LMzzk0gwmG1gZcaWoXb93y`)
+    return fetch(`https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=343&sort=date,asc&keyword=${concertInputValue.value}&apikey=QPEjElLoY6LMzzk0gwmG1gZcaWoXb93y`)
     .then(concerts => concerts.json())
 }
 

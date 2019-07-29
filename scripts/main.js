@@ -14,9 +14,20 @@ const fetchTheFetcher = () => {
             renderPark(htmlRep)
             
         }
-    const saveParkButton = document.querySelector("#saveParkButton")
-    saveParkButton.addEventListener("click", () => {
-        console.log("hello")
+    const saveParkButtons = document.querySelectorAll(".saveParkButton")
+    saveParkButtons.forEach(park => {
+        park.addEventListener("click", () => {
+            const parkName = park.parentElement.childNodes[1]
+            const parkAddress = park.parentElement.childNodes[3]
+
+            const parkHtml = `
+            <h1>${parkName.innerHTML}</h1>
+            <p>${parkAddress.innerHTML}</p>`
+
+            const parkItinerary = document.querySelector("#itineraryContainer__park")    
+            parkItinerary.innerHTML = parkHtml
+
+    });
     })
     })
 }

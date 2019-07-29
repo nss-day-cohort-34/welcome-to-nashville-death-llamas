@@ -38,7 +38,7 @@ const parksHTML = parkObject => {
     <section>
         <h1>${parkObject.park_name}</h1>
         <p>${parkAddress}</p>
-        <button id="saveParkButton">Save</button>
+        <button class="saveParkButton">Save</button>
     </section>
     `
 }

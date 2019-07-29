@@ -11,18 +11,18 @@ const meetupsFactory = meetup => {
     return `
     <section class="meetupEl">
     <p><a href="${meetup.url}">${meetup.name.text}</a></p>
-    <button id="saveMeetupsButton">Save</button>
+    <button class="saveMeetupsButton">Save</button>
     </section>`
 }
 
-const mettupItineraryItemLocation = document.querySelector("#itineraryContainer__meetup")
-const meetupHTMLInItinerary = meetup => {
-    return `
-    <section class="meetupItinerary--item">
-    <p><a href="${meetup.url}">${meetup.name.text}</a></p>
-    </section>
-    `
-}
+// const mettupItineraryItemLocation = document.querySelector("#itineraryContainer__meetup")
+// const meetupHTMLInItinerary = meetup => {
+//     return `
+//     <section class="meetupItinerary--item">
+//     <p><a href="${meetup.url}">${meetup.name.text}</a></p>
+//     </section>
+//     `
+// }
 
 const createConcertHTML = (concertObj) => {
 

@@ -23,6 +23,22 @@ const getMeetups = () => {
                 const htmlRep = meetupsFactory(result)
                 DOMprinter(htmlRep)
             }
+            // const saveMeetupbuttons = document.querySelectorAll(".saveMeetupsButton")
+            // saveMeetupbuttons.forEach(meetup => {
+            //     meetup.addEventListener(“click”, () => {
+            //         const anchorItem = meetup.parentElement.childNodes[0]
+            //         const textItem = meetup.parentElement.childNodes[1]
+            //         // console.log(textItem)
+            //         // const descriptionItem = meetup.parentElement.childNodes[2]
+            //         // const newHtml = `<h1>${anchorItem.innerHTML} ${textItem.data}</h1>
+            //         // <p>${descriptionItem.innerHTML}</p>`
+
+            //         // const itineraryResults = document.querySelector(“.itinerary__meetup”)
+            //         // itineraryResults.innerHTML = newHtml
+
+
+            //         console.log(meetup.parentElement.childNodes)
+            //     })
 
         })
 }

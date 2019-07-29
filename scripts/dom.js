@@ -12,9 +12,9 @@ const DOMprinter = (htmlString) => {
     meetupsContainer.innerHTML += htmlString
     //add it to innerHTML of DOM location
 }
-const DOMprinter2 = htmlString => {
-    mettupItineraryItemLocation.innerHTML += htmlString
-}
+// const DOMprinter2 = htmlString => {
+//     mettupItineraryItemLocation.innerHTML += htmlString
+// }
 const getConcertElement = document.querySelector("#concertResults")
 
 const renderConcerts = (string) => {

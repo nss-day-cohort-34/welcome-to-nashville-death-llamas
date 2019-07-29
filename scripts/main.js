@@ -41,10 +41,9 @@ getConcertsButton.addEventListener("click", () => {
     getConcertFetch();
 })
 
-const addMeetupsButton = document.querySelector("#resultsContainer")
-debugger
-addMeetupsButton.addEventListener("click", () => {
-    const meetupItem = meetupHTMLInItinerary
-    DOMprinter2(meetupItem)
-})
-
+// const addMeetupsButton = document.querySelector("#resultsContainer")
+// debugger
+// addMeetupsButton.addEventListener("click", () => {
+//     const meetupItem = meetupHTMLInItinerary
+//     DOMprinter2(meetupItem)
+// })

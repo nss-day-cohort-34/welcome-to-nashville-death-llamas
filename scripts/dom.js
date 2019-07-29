@@ -13,3 +13,8 @@ const DOMprinter = (htmlString) => {
     //add it to innerHTML of DOM location
 }
 
+const getConcertElement = document.querySelector("#concertResults")
+
+const renderConcerts = (string) => {
+    getConcertElement.innerHTML += string
+}

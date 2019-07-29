@@ -1,13 +1,20 @@
 // const restarantFetcher = () => {
 //     return fetch("")
 // }
+const restarauntFetcher = () => {
+    fetch("https://opentable.herokuapp.com/api/restaurants?city=Nashville")
+        .then(r => r.json())
+        .then(results => {
+            console.log(results)
+            for (result of results.restaurants) {
+            const restarauntHTML = repHTML(result)
+            printToDOM(restarauntHTML)
+            }
+        })
+    }
 
-fetch("https://developers.zomato.com/api/v2.1/search?entity_id=1138&entity_type=city&start=first&sort=rating", {
-        headers: {
-            "Accept": "application/json",
-            "user-key": "26e679825e84d13d1cb5d6eb48c1c89f"
-        }
-    })
+restarauntFetcher()
+
     .then(r => r.json())
     .then(results => {
         console.log(results)

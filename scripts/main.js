@@ -29,7 +29,6 @@ const getConcertFetch = () => {
             const oneConcert = concerts._embedded.events[index];
             const finalConcert = createConcertHTML(oneConcert)
             renderConcerts(finalConcert)
-            console.log(concerts)
             
         }
     })
@@ -38,5 +37,6 @@ const getConcertFetch = () => {
     const getConcertsButton = document.getElementById("concertsSearchButton")
     
     getConcertsButton.addEventListener("click", () => {
+        getConcertElement.innerHTML = ""
         getConcertFetch();
     })

@@ -1,5 +1,7 @@
+const restarauntName = document.querySelector("#restaurantsSearchField")
+
 const restarauntFetcher = () => {
-    fetch("https://opentable.herokuapp.com/api/restaurants?city=Nashville")
+    fetch(`https://opentable.herokuapp.com/api/restaurants?city=Nashville&name=${restarauntName.value}&per_page=10`)
         .then(r => r.json())
         .then(results => {
             console.log(results)
@@ -7,10 +9,21 @@ const restarauntFetcher = () => {
                 const restarauntHTML = repHTML(result)
                 printToDOM(restarauntHTML)
             }
-        })
-}
+            const restarauntButtons = document.querySelectorAll(".restarauntSaveButton")
+        restarauntButtons.forEach(restaraunt => {
+        restaraunt.addEventListener("click", () => {
+            const restarauntName = restaraunt.parentElement.childNodes[1]
+            const restarauntHtml = `
+            <h1>${restarauntName.innerHTML}</h1>
+            `
+            const restarauntItinerary = document.querySelector("#itineraryContainer__restaurant")    
+            restarauntItinerary.innerHTML = restarauntHtml
 
-restarauntFetcher()
+            console.log(restarauntName)
+    });
+    })
+    })
+}
 
 //matt's code below (does beg refactoring at "modularization phase")
 const searchMeetups = document.querySelector("#meetupsSearchField")
@@ -57,4 +70,3 @@ const parkFetcher = () => {
     return fetch(`https://data.nashville.gov/resource/74d7-b74t.json?$$app_token=uyvbFrUZ9I6eWTToRXt5hNAvw&${parkSearch.value}=Yes&$limit=10`)
         .then(data => data.json())
 }
-

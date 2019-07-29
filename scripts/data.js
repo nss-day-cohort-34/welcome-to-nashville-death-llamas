@@ -13,10 +13,10 @@ const restarauntFetcher = () => {
 restarauntFetcher()
 
 //matt's code below (does beg refactoring at "modularization phase")
-const searchMeetups = document.querySelector("#meetupsSearchField").value
+const searchMeetups = document.querySelector("#meetupsSearchField")
 
 const getMeetups = () => {
-    return fetch(`https://www.eventbriteapi.com/v3/events/search/?q=${searchMeetups}&location.address=nashville&token=NAZKLO5PCLPRIX3ALUP5`)
+    return fetch(`https://www.eventbriteapi.com/v3/events/search/?q=${searchMeetups.value}&location.address=nashville&token=NAZKLO5PCLPRIX3ALUP5`)
         .then(a => a.json())
         .then(results => {
             // console.log(results)

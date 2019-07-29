@@ -8,14 +8,21 @@ const repHTML = (restarauntObject) => {
 
 //matt's code below
 const meetupsFactory = meetup => {
-    console.log(meetup.url)
-    console.log(meetup.name.text)
     return `
     <section class="meetupEl">
     <p><a href="${meetup.url}">${meetup.name.text}</a></p>
+    <button class="saveMeetupsButton">Save</button>
     </section>`
-
 }
+
+// const mettupItineraryItemLocation = document.querySelector("#itineraryContainer__meetup")
+// const meetupHTMLInItinerary = meetup => {
+//     return `
+//     <section class="meetupItinerary--item">
+//     <p><a href="${meetup.url}">${meetup.name.text}</a></p>
+//     </section>
+//     `
+// }
 
 const createConcertHTML = (concertObj) => {
     

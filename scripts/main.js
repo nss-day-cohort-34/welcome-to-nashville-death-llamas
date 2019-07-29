@@ -1,6 +1,10 @@
 // This is where we call functions and pull our hair out
 
-
+const saveRestaurantButton = document.querySelector("#saveRestaurantButton")
+    saveRestaurantButton.addEventListener("click", () => {
+        restarauntFetcher()
+    })
+// let parkSearch = document.querySelector("#parksSearchField").value
 const parkSearchButton = document.querySelector("#parkSearchButton")
 
 const fetchTheFetcher = () => {

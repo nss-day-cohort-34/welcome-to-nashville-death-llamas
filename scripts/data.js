@@ -9,7 +9,20 @@ const restarauntFetcher = () => {
                 const restarauntHTML = repHTML(result)
                 printToDOM(restarauntHTML)
             }
-        })
+            const restarauntButtons = document.querySelectorAll(".restarauntSaveButton")
+        restarauntButtons.forEach(restaraunt => {
+        restaraunt.addEventListener("click", () => {
+            const restarauntName = restaraunt.parentElement.childNodes[1]
+            const restarauntHtml = `
+            <h1>${restarauntName.innerHTML}</h1>
+            `
+            const restarauntItinerary = document.querySelector("#itineraryContainer__restaurant")    
+            restarauntItinerary.innerHTML = restarauntHtml
+
+            console.log(restarauntName)
+    });
+    })
+    })
 }
 
 //matt's code below (does beg refactoring at "modularization phase")
@@ -45,4 +58,3 @@ const parkFetcher = () => {
     return fetch(`https://data.nashville.gov/resource/74d7-b74t.json?$$app_token=uyvbFrUZ9I6eWTToRXt5hNAvw&${parkSearch.value}=Yes&$limit=10`)
         .then(data => data.json())
 }
-

@@ -25,11 +25,11 @@ const meetupsFactory = meetup => {
 // }
 
 const createConcertHTML = (concertObj) => {
-
+    
     return `
-        <h3>${concertObj.name}</h3>
+        <h1>${concertObj.name}</h1>
         <p>${concertObj.dates.start.localDate}</p>
-        <button class="addButton"> Add </button>
+        <button class="concertSaveButton"> Save </button>
     `
 }
 

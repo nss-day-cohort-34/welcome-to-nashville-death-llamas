@@ -6,14 +6,7 @@ body {
     background-size: cover;
     min-height: 100vh;
     color: rgb(1,59,154);
-    font-family: 'Montserrat', sans-serif;
-}
-
-.welcomeHeader {
-    display: flex;
-    justify-content: center;
-    font-size: 3em;
-    font-family: 'Shrikhand', cursive;
+    
 }
 
 /* affects the entire search container */
@@ -38,7 +31,7 @@ button {
     border: none;
     color: rgb(1,59,154);
     border-radius: 5px;
-    font-family: 'Montserrat', sans-serif;
+    
 }
 
 button:hover {

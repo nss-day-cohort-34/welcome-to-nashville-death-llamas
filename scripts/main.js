@@ -9,7 +9,6 @@ const parkSearchButton = document.querySelector("#parkSearchButton")
 
 const fetchTheFetcher = () => {
     parkFetcher().then(parks => {
-        // console.log('parks: ', parks);
 
         for (let i = 0; i < parks.length; i++) {
             const park = parks[i];
@@ -17,6 +16,21 @@ const fetchTheFetcher = () => {
             renderPark(htmlRep)
             
         }
+    const saveParkButtons = document.querySelectorAll(".saveParkButton")
+    saveParkButtons.forEach(park => {
+        park.addEventListener("click", () => {
+            const parkName = park.parentElement.childNodes[1]
+            const parkAddress = park.parentElement.childNodes[3]
+
+            const parkHtml = `
+            <h1>${parkName.innerHTML}</h1>
+            <p>${parkAddress.innerHTML}</p>`
+
+            const parkItinerary = document.querySelector("#itineraryContainer__park")    
+            parkItinerary.innerHTML = parkHtml
+
+    });
+    })
     })
 }
 
@@ -24,7 +38,12 @@ const fetchTheFetcher = () => {
 parkSearchButton.addEventListener("click", () => {
         parksInDom.innerHTML = ""
         fetchTheFetcher()
-})
+
+    })
+    
+
+
+
 const getConcertFetch = () => {
     getConcertData().then(concerts => {
     
@@ -37,9 +56,10 @@ const getConcertFetch = () => {
         }
     })
     }
-    
-    const getConcertsButton = document.getElementById("concertsSearchButton")
-    
-    getConcertsButton.addEventListener("click", () => {
-        getConcertFetch();
-    })
+
+const getConcertsButton = document.getElementById("concertsSearchButton")
+
+getConcertsButton.addEventListener("click", () => {
+    getConcertFetch();
+})
+

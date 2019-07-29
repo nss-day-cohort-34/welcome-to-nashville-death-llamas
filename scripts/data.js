@@ -37,3 +37,12 @@ getConcertData = () => {
     return fetch(`https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=343&sort=date,asc&keyword=${concertInputValue}&apikey=QPEjElLoY6LMzzk0gwmG1gZcaWoXb93y`)
     .then(concerts => concerts.json())
 }
+
+const parkSearch = document.querySelector("#parkSearchField")
+
+
+const parkFetcher = () => {
+    return fetch(`https://data.nashville.gov/resource/74d7-b74t.json?$$app_token=uyvbFrUZ9I6eWTToRXt5hNAvw&${parkSearch.value}=Yes&$limit=10`)
+        .then(data => data.json())
+}
+

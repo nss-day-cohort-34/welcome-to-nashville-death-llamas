@@ -2,8 +2,3 @@
 
 
 // const parkResults = document.querySelector("#parkResults")
-const parksInDom = document.querySelector("#parkResults")
-
-const renderPark = parkHTML => {
-    parksInDom.innerHTML += parkHTML 
-}

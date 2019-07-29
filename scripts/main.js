@@ -49,8 +49,23 @@ const getConcertFetch = () => {
             renderConcerts(finalConcert)
             
         }
+        const concertSaveButtons = document.querySelectorAll(".concertSaveButton")
+    concertSaveButtons.forEach(concert => {
+        concert.addEventListener("click", () => {
+            const concertName = concert.parentElement.childNodes[1]
+            const concertDate = concert.parentElement.childNodes[3]
+
+            const concertHtml = `
+            <h1>${concertName.innerHTML}</h1>
+            <p>${concertDate.innerHTML}</p>`
+
+            const concertItinerary = document.querySelector("#itineraryContainer__concert")    
+            concertItinerary.innerHTML = concertHtml
+    });
+    })
     })
     }
+    
     
     const getConcertsButton = document.getElementById("concertsSearchButton")
     

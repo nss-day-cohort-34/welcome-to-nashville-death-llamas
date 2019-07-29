@@ -47,7 +47,7 @@ meetupsButton.addEventListener("click", getMeetups)
 const concertInputValue = document.querySelector("#concertInput")
 
 getConcertData = () => {
-    return fetch(`https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=343&sort=date,asc&keyword=${concertInputValue.value}&apikey=QPEjElLoY6LMzzk0gwmG1gZcaWoXb93y`)
+    return fetch(`https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=343&sort=date,desc&keyword=${concertInputValue.value}&apikey=QPEjElLoY6LMzzk0gwmG1gZcaWoXb93y&size=10`)
     .then(concerts => concerts.json())
 }
 

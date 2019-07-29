@@ -18,3 +18,9 @@ const getConcertElement = document.querySelector("#concertResults")
 const renderConcerts = (string) => {
     getConcertElement.innerHTML += string
 }
+
+const parksInDom = document.querySelector("#parkResults")
+
+const renderPark = parkHTML => {
+    parksInDom.innerHTML += parkHTML 
+}

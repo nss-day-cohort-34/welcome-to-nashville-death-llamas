@@ -32,15 +32,27 @@ const getMeetups = () => {
     return fetch(`https://www.eventbriteapi.com/v3/events/search/?q=${searchMeetups.value}&location.address=nashville&token=NAZKLO5PCLPRIX3ALUP5`)
         .then(a => a.json())
         .then(results => {
-            // console.log(results)
             for (result of results.events) {
                 const htmlRep = meetupsFactory(result)
                 DOMprinter(htmlRep)
             }
+            const saveMeetupsButtons = document.querySelectorAll(".saveMeetupsButton")
+            saveMeetupsButtons.forEach(meetup => {
+                meetup.addEventListener("click", () => {
+                    const meetupName = meetup.parentElement.childNodes[1]
+                    // const meetupUrl = meetup.parentElement.childNodes.children[0]
 
+                    const meetupsHTML = `
+                    <p>${meetupName.innerText}</p>
+                    `
+
+                    const meetupsItinerary = document.querySelector("#itineraryContainer__meetup")
+                    meetupsItinerary.innerHTML = meetupsHTML
+
+                })
+            })
         })
 }
-
 const meetupsButton = document.querySelector("#meetupsSearch")
 meetupsButton.addEventListener("click", getMeetups)
 
@@ -48,7 +60,7 @@ const concertInputValue = document.querySelector("#concertInput")
 
 getConcertData = () => {
     return fetch(`https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=343&sort=date,desc&keyword=${concertInputValue.value}&apikey=QPEjElLoY6LMzzk0gwmG1gZcaWoXb93y&size=10`)
-    .then(concerts => concerts.json())
+        .then(concerts => concerts.json())
 }
 
 const parkSearch = document.querySelector("#parkSearchField")

@@ -23,26 +23,23 @@ const getMeetups = () => {
                 const htmlRep = meetupsFactory(result)
                 DOMprinter(htmlRep)
             }
-            // const saveMeetupbuttons = document.querySelectorAll(".saveMeetupsButton")
-            // saveMeetupbuttons.forEach(meetup => {
-            //     meetup.addEventListener(“click”, () => {
-            //         const anchorItem = meetup.parentElement.childNodes[0]
-            //         const textItem = meetup.parentElement.childNodes[1]
-            //         // console.log(textItem)
-            //         // const descriptionItem = meetup.parentElement.childNodes[2]
-            //         // const newHtml = `<h1>${anchorItem.innerHTML} ${textItem.data}</h1>
-            //         // <p>${descriptionItem.innerHTML}</p>`
+            const saveMeetupsButtons = document.querySelectorAll(".saveMeetupsButton")
+            saveMeetupsButtons.forEach(meetup => {
+                meetup.addEventListener("click", () => {
+                    const meetupName = meetup.parentElement.childNodes[1]
+                    // const meetupUrl = meetup.parentElement.childNodes.children[0]
 
-            //         // const itineraryResults = document.querySelector(“.itinerary__meetup”)
-            //         // itineraryResults.innerHTML = newHtml
+                    const meetupsHTML = `
+                    <p>${meetupName.innerText}</p>
+                    `
 
+                    const meetupsItinerary = document.querySelector("#itineraryContainer__meetup")
+                    meetupsItinerary.innerHTML = meetupsHTML
 
-            //         console.log(meetup.parentElement.childNodes)
-            //     })
-
+                })
+            })
         })
 }
-
 const meetupsButton = document.querySelector("#meetupsSearch")
 meetupsButton.addEventListener("click", getMeetups)
 

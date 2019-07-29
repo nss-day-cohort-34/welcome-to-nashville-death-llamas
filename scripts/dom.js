@@ -1,6 +1,6 @@
 const restarauntResults = document.querySelector("#restaurantResults");
 console.log(restarauntResults)
-const DOMprinter = (htmlString) => {
+const printToDOM = (htmlString) => {
     restarauntResults.innerHTML += htmlString
 }
 

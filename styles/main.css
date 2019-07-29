@@ -14,8 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 1em 5em;
-    background-color: white;
+    background-color: white; 
 }
 
 
@@ -45,7 +44,7 @@ button:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    font-size: 14px;
+    justify-content: flex-start;
 }
 
 #parkResults {
@@ -105,4 +104,5 @@ button:hover {
 
 section {
     margin: 1em;
+    max-width: 10em
 }

@@ -1,5 +1,7 @@
+const restarauntName = document.querySelector("#restaurantsSearchField")
+
 const restarauntFetcher = () => {
-    fetch("https://opentable.herokuapp.com/api/restaurants?city=Nashville")
+    fetch(`https://opentable.herokuapp.com/api/restaurants?city=Nashville&name=${restarauntName.value}&per_page=10`)
         .then(r => r.json())
         .then(results => {
             console.log(results)
@@ -9,8 +11,6 @@ const restarauntFetcher = () => {
             }
         })
 }
-
-restarauntFetcher()
 
 //matt's code below (does beg refactoring at "modularization phase")
 const searchMeetups = document.querySelector("#meetupsSearchField").value

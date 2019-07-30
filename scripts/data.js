@@ -10,19 +10,19 @@ const restarauntFetcher = () => {
                 printToDOM(restarauntHTML)
             }
             const restarauntButtons = document.querySelectorAll(".restarauntSaveButton")
-        restarauntButtons.forEach(restaraunt => {
-        restaraunt.addEventListener("click", () => {
-            const restarauntName = restaraunt.parentElement.childNodes[1]
-            const restarauntHtml = `
+            restarauntButtons.forEach(restaraunt => {
+                restaraunt.addEventListener("click", () => {
+                    const restarauntName = restaraunt.parentElement.childNodes[1]
+                    const restarauntHtml = `
             <h1>${restarauntName.innerHTML}</h1>
             `
-            const restarauntItinerary = document.querySelector("#itineraryContainer__restaurant")    
-            restarauntItinerary.innerHTML = restarauntHtml
+                    const restarauntItinerary = document.querySelector("#itineraryContainer__restaurant")
+                    restarauntItinerary.innerHTML = restarauntHtml
 
-            console.log(restarauntName)
-    });
-    })
-    })
+                    console.log(restarauntName)
+                });
+            })
+        })
 }
 
 //matt's code below (does beg refactoring at "modularization phase")
@@ -35,6 +35,7 @@ const getMeetups = () => {
             for (result of results.events) {
                 const htmlRep = meetupsFactory(result)
                 DOMprinter(htmlRep)
+                // searchMeetups.value = ""
             }
             const saveMeetupsButtons = document.querySelectorAll(".saveMeetupsButton")
             saveMeetupsButtons.forEach(meetup => {
@@ -54,7 +55,12 @@ const getMeetups = () => {
         })
 }
 const meetupsButton = document.querySelector("#meetupsSearch")
-meetupsButton.addEventListener("click", getMeetups)
+const meetupsResults = document.querySelector("#meetupResults")
+meetupsButton.addEventListener("click", () => {
+    // meetupsResults.innerHTML = ""
+    getMeetups
+}
+)
 
 const concertInputValue = document.querySelector("#concertInput")
 
@@ -70,3 +76,4 @@ const parkFetcher = () => {
     return fetch(`https://data.nashville.gov/resource/74d7-b74t.json?$$app_token=uyvbFrUZ9I6eWTToRXt5hNAvw&${parkSearch.value}=Yes&$limit=10`)
         .then(data => data.json())
 }
+

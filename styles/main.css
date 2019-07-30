@@ -6,16 +6,21 @@ body {
     background-size: cover;
     min-height: 100vh;
     color: rgb(1,59,154);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
     
 }
 
 /* affects the entire search container */
 #searchContainer {
     display: flex;
+    opacity: 0.8;
     flex-direction: column;
     justify-content: center;
     background-color: white; 
 }
+
+
 
 /* affects the individual search fields */
 fieldset {
@@ -40,9 +45,59 @@ button:hover {
 /* styles all sections in results */
 #resultsContainer {
     display: flex;
+    justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
+    background-color: white;
+    opacity: 0.8;
+}
+
+#parkResults {
+    height: 500px;
+    overflow: scroll;
+}
+
+#concertResults {
+    height: 500px;
+    overflow: scroll;
+}
+
+#restaurantResults {
+    height: 500px;
+    overflow: scroll;
+}
+
+#meetupResults {
+    height: 500px;
+    overflow: scroll;
+}
+
+#itineraryContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: white;
+    opacity: 0.9s;
+}
+
+#itineraryContainer__park {
+    margin: 5px;
+}
+
+#itineraryContainer__concert {
+    margin: 5px;
+
+}
+
+#itineraryContainer__restaurant {
+    margin: 5px;
+
+}
+
+#itineraryContainer__meetup {
+    margin: 5px;
+
 }
 
 section {

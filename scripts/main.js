@@ -2,6 +2,7 @@
 
 const saveRestaurantButton = document.querySelector("#saveRestaurantButton")
     saveRestaurantButton.addEventListener("click", () => {
+        document.querySelector("#restaurantResults").innerHTML = ""
         restarauntFetcher()
     })
 // let parkSearch = document.querySelector("#parksSearchField").value
@@ -36,9 +37,13 @@ const fetchTheFetcher = () => {
 
 
 parkSearchButton.addEventListener("click", () => {
-    parksInDom.innerHTML = ""
-    fetchTheFetcher()
-})
+        parksInDom.innerHTML = ""
+        fetchTheFetcher()
+    })
+    
+
+
+
 const getConcertFetch = () => {
     getConcertData().then(concerts => {
 

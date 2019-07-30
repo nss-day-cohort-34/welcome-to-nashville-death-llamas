@@ -42,7 +42,7 @@ const getMeetups = () => {
                     const meetupName = meetup.parentElement.childNodes[1]
                     // const meetupUrl = meetup.parentElement.childNodes.children[0]
 
-                    const meetupsHTML = `
+                    const meetupsHTML = `\
                     <p>${meetupName.innerText}</p>
                     `
 
@@ -54,7 +54,11 @@ const getMeetups = () => {
         })
 }
 const meetupsButton = document.querySelector("#meetupsSearch")
-meetupsButton.addEventListener("click", getMeetups)
+meetupsButton.addEventListener("click", () => {
+    meetupsContainer.innerHTML = ""
+    getMeetups()
+
+    })
 
 const concertInputValue = document.querySelector("#concertInput")
 

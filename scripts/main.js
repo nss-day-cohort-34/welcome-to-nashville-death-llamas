@@ -2,6 +2,7 @@
 
 const saveRestaurantButton = document.querySelector("#saveRestaurantButton")
     saveRestaurantButton.addEventListener("click", () => {
+        document.querySelector("#restaurantResults").innerHTML = ""
         restarauntFetcher()
     })
 // let parkSearch = document.querySelector("#parksSearchField").value

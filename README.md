@@ -14,4 +14,4 @@ When the user searches for any of the four categories of things to do, the resul
 
 ## Acknowledgements
 
-Special thanks to Humberto Alvarez, Haroon Iqbal, Will Wilkinson, our instructors, and everyone else in Cohort 34 that helped us along the way!
+Special thanks to Humberto Alvarez, Haroon Iqbal, Will Wilkinson, Brian Wilson, our instructors, and everyone else in Cohort 34 that helped us along the way!
